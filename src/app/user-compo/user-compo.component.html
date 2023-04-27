@@ -1,0 +1,135 @@
+<!-- <div class="container py-5">
+    <h5 class="center" style=" margin-top: 30px; margin-bottom: 30 ;">User
+    </h5>
+    <table class="table table-striped table-info">
+
+        <thead>
+
+            <tr>
+                <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal"
+                    (click)="getUser1DetailsFromService()">See Jyoti's Details</button>
+            </tr>
+            <br>
+
+
+        </thead>
+        <thead>
+            <tr>
+                <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal"
+                    (click)="getUser2DetailsFromService()">See Anu's Details</button>
+            </tr>
+        </thead>
+        <br>
+        <thead>
+            <tr>
+                <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal"
+                    (click)="getUser3DetailsFromService()">See Abi's Details</button>
+            </tr>
+        </thead>
+        <br>
+        <tbody>
+            <tr *ngFor="let u1 of user1">
+                <td>{{u1}}</td>
+            </tr>
+        </tbody>
+        <br>
+        <tbody>
+            <tr *ngFor="let u2 of user2">
+                <td>{{u2}}</td>
+            </tr>
+        </tbody>
+        <br>
+        <tbody>
+            <tr *ngFor="let u3 of user3">
+                <td>{{u3}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+
+</div> -->
+<div class="container" style="margin-top: 50px;">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">OneStopEvents Management System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#addEmployee"
+                    type="submit" style="margin-left: 600px;" (click)="navigate()">Add
+                    Employee</button>
+
+                <!-- <button class="btn btn-outline-success" routerLink="/javascript" data-bs-toggle="modal"
+                    data-bs-target="#addEmployee" style="margin-left: 550px;" type="submit">java Script</button> -->
+            </div>
+        </div>
+    </nav>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Visitor ID</th>
+                <th scope="col">Visitor Name</th>
+                <th scope="col">Visitor Location</th>
+                <th scope="col">Visitor MobileNo</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let v of visitor">
+                <td>{{v.visitorID}}</td>
+                <td>{{v.visitorName}}</td>
+                <td>{{v.visitorLocation}}</td>
+                <td>{{v.visitorNo}}</td>
+                <td>
+                    <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal"
+                        data-bs-target="#editEmployee" (click)="editEmployee(v.visitorID)">Edit</button>
+                    <button type="button" style="cursor: pointer;" class="btn btn-danger"
+                        (click)="deleteEmployee(v.visitorID)">Delete</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <!--edit visitor Modal -->
+    <div class="modal fade" id="editEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Employee Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form [formGroup]="VisitorForm">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Visitor Name</label>
+                            <input type="text" formControlName="visitorName" class="form-control" id="email"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Visitor Location</label>
+                            <input type="text" formControlName="visitorLocation" class="form-control" id="email"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Visitor Contact No</label>
+                            <input type="text" formControlName="visitorNo" class="form-control" id="email"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-outline-success" (click)="edit()">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

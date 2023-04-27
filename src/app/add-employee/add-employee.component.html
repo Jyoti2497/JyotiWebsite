@@ -1,0 +1,69 @@
+<div class="container my-5">
+    <div class="full-bg-img mask rgba-gradient">
+        <div class="formCenter container">
+            <h3 class="font-waight-light display-7"
+                style="margin-top: 30px; margin-bottom: 40px;    ;margin-left: 180px;">
+                Visitor Form
+            </h3>
+            <form [formGroup]="visitorEmpForm" class="form-group mx-2">
+                <div class="formCenter mb-3">
+                    <div class="col-md-6 my-3">
+                        <label class="form-label row g-3 required" for="firstName"> Visitor Name</label>
+                        <input type="text" formControlName="visitorName" maxlength="20" class="form-control"
+                            placeholder="Enter visitor name" name="visitorName"  ngModel required
+                            [ngClass]="{ 'is-invalid': visitorEmpForm.get('visitorName')?.touched  && visitorEmpForm.get('visitorName')?.hasError('required') || visitorEmpForm.get('visitorName')?.hasError('pattern') || submitted &&  visitorEmpForm.get('visitorName')?.errors}" />
+                        <div class="invalid-feedback">
+                            <div
+                                *ngIf="visitorEmpForm.get('visitorName')?.touched  && visitorEmpForm.get('visitorName')?.hasError('required') || submitted &&  visitorEmpForm.get('visitorName')?.errors && visitorEmpForm.get('visitorName')?.value===''">
+                                Visitor name is required</div>
+                            <div *ngIf="visitorEmpForm.get('visitorName')?.hasError('pattern')">
+                                Visitor name must be in characters.
+                            </div>
+                            <div *ngIf="visitorEmpForm.get('visitorName')?.hasError('maxlength')">
+                                Visitor name must not exceed 20 characters
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6  my-3">
+                        <label class="form-label required" for="visitorLocation"> Visitor Location</label>
+                        <input type="text" formControlName="visitorLocation" maxlength="20" class="form-control"
+                            placeholder="Enter visitor location" name="visitorLocation"  ngModel required
+                            [ngClass]="{ 'is-invalid': visitorEmpForm.get('visitorLocation')?.touched  && visitorEmpForm.get('visitorLocation')?.hasError('required') || visitorEmpForm.get('visitorLocation')?.hasError('pattern') || submitted &&  visitorEmpForm.get('visitorLocation')?.errors}" />
+                        <div class="invalid-feedback">
+                            <div
+                                *ngIf="visitorEmpForm.get('visitorLocation')?.touched  && visitorEmpForm.get('visitorLocation')?.hasError('required') || submitted &&  visitorEmpForm.get('visitorLocation')?.errors && visitorEmpForm.get('visitorLocation')?.value===''">
+                                Visitor Location is required</div>
+                            <div *ngIf="visitorEmpForm.get('visitorLocation')?.hasError('pattern')">
+                                Visitor Location must be in characters.
+                            </div>
+                            <div *ngIf="visitorEmpForm.get('visitorLocation')?.hasError('maxlength')">
+                                Visitor Locatione must not exceed 20 characters
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-8">
+                    <div class="col-md-6">
+                        <label class="form-label required" for="visitorNo">Visitor Contact No</label>
+                        <input type="text" formControlName="visitorNo" maxlength="20" class="form-control"
+                            placeholder="Enter visitor contact no" name="visitorNo"  ngModel required
+                            [ngClass]="{ 'is-invalid': visitorEmpForm.get('visitorNo')?.touched  && visitorEmpForm.get('visitorNo')?.hasError('required') || visitorEmpForm.get('visitorNo')?.hasError('pattern') || submitted &&  visitorEmpForm.get('visitorNo')?.errors}" />
+                        <div class="invalid-feedback">
+                            <div
+                                *ngIf="visitorEmpForm.get('visitorNo')?.touched  && visitorEmpForm.get('visitorNo')?.hasError('required') || submitted &&  visitorEmpForm.get('visitorNo')?.errors">
+                                Visitor Contact No is required</div>
+                            <div *ngIf="visitorEmpForm.get('visitorNo')?.hasError('pattern')">
+                                Please enter Visitor Contact No
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="text-center mt-4 my-4">
+                    <button (click)="SubmitEmpForm()" type="button" class="btn btn-success ml-2">Submit</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+<!-- <p>visitor-all works!</p>
+<div class="container" style="margin-top: 50px;">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">OneStopEvents Management System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#addEmployee"
+                    type="submit" style="margin-left: 600px;" (click)="navigate()">Add
+                    Employee</button>
+
+                <button class="btn btn-outline-success" routerLink="/javascript" data-bs-toggle="modal"
+                    data-bs-target="#addEmployee" style="margin-left: 550px;" type="submit">java Script</button>
+            </div>
+        </div>
+    </nav> -->
+
+<!-- <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Visitor ID</th>
+                <th scope="col">Visitor Name</th>
+                <th scope="col">Visitor Location</th>
+                <th scope="col">Visitor MobileNo</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let v of visitor">
+                <td>{{v.visitorID}}</td>
+                <td>{{v.visitorName}}</td>
+                <td>{{v.visitorLocation}}</td>
+                <td>{{v.visitorNo}}</td>
+                <td>
+                    <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal"
+                        data-bs-target="#editEmployee" (click)="(visitor.visitorID)">Edit</button>
+                    <button type="button" style="cursor: pointer;" class="btn btn-danger"
+                        (click)="(visitor.visitorID)">Delete</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table> -->
+<div container-fluids py-5>
+    <button type="button" class="btn btn-outline-primary me-2" style="margin-top: 30px;margin-left: 550px;"
+        data-bs-toggle="modal" (click)="showData('data')">Show
+        All Data</button>
+</div>
+<div class="container py-9" style=" margin-top: 50px;">
+    <table class="table table-hover table-striped table-warning" *ngIf="selectedData">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            <tr class="table-danger" *ngFor="let itm of dataAll">
+                <td>{{ itm.idall }}</td>
+                <td>{{ itm.nameall }}</td>
+                <td>{{ itm.ageall }}</td>
+                <td>{{ itm.addressall }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

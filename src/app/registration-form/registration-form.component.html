@@ -1,0 +1,113 @@
+<section class="view intro-2">
+    <div class="full-bg-img mask rgba-gradient">
+        <div class="container">
+            <!-- <h3 class="font-waight-light display-7 border-bottom" style="margin-top: 30px; margin-bottom: 30    ;">
+                Registration Form
+            </h3> -->
+            <h3 class="font-waight-light display-7"
+                style="font-family: 'Times New Roman', Times, serif; display: block;  text-align: center;">
+                Signup Form
+            </h3>
+            <form [formGroup]="registrationForm" class="form-group" style="margin-top:200px;">
+                <div class="row mt-3 mb-3">
+                    <div class="col-md-6">
+                        <b><label class="form-label required" for="firstName"> First Name</label></b>
+                        <input type="text" formControlName="firstName" maxlength="20" class="form-control"
+                            placeholder="Enter first name" name="firstName"  ngModel required
+                            [ngClass]="{ 'is-invalid': registrationForm.get('firstName')?.touched  && registrationForm.get('firstName')?.hasError('required') || registrationForm.get('firstName')?.hasError('pattern') || submitted &&  registrationForm.get('firstName')?.errors}" />
+                        <div class="invalid-feedback">
+                            <div
+                                *ngIf="registrationForm.get('firstName')?.touched  && registrationForm.get('firstName')?.hasError('required') || submitted &&  registrationForm.get('firstName')?.errors && registrationForm.get('firstName')?.value===''">
+                                Country is required</div>
+                            <div *ngIf="registrationForm.get('firstName')?.hasError('pattern')">
+                                First Name must be in characters.
+                            </div>
+                            <div *ngIf="registrationForm.get('firstName')?.hasError('maxlength')">
+                                First Name must not exceed 20 characters
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <b><label class="form-label required" for="lastName"> Last Name</label></b>
+                        <input type="text" formControlName="lastName" maxlength="20" class="form-control"
+                            placeholder="Enter last name" name="lastName"  ngModel required
+                            [ngClass]="{ 'is-invalid': registrationForm.get('lastName')?.touched  && registrationForm.get('lastName')?.hasError('required') || registrationForm.get('lastName')?.hasError('pattern') || submitted &&  registrationForm.get('lastName')?.errors}" />
+                        <div class="invalid-feedback">
+                            <div
+                                *ngIf="registrationForm.get('lastName')?.touched  && registrationForm.get('lastName')?.hasError('required') || submitted &&  registrationForm.get('lastName')?.errors && registrationForm.get('lastName')?.value===''">
+                                Last Name is required</div>
+                            <div *ngIf="registrationForm.get('lastName')?.hasError('pattern')">
+                                Last Name must be in characters.
+                            </div>
+                            <div *ngIf="registrationForm.get('lastName')?.hasError('maxlength')">
+                                Last Name must not exceed 20 characters
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-8">
+                    <div class="col-md-6">
+                        <b><label class="form-label required" for="email">Email</label></b>
+                        <input type="text" formControlName="email" maxlength="20" class="form-control"
+                            placeholder="Enter email" name="email"  ngModel required
+                            [ngClass]="{ 'is-invalid': registrationForm.get('email')?.touched  && registrationForm.get('email')?.hasError('required') || registrationForm.get('email')?.hasError('pattern') || submitted &&  registrationForm.get('email')?.errors}" />
+                        <div class="invalid-feedback">
+                            <div
+                                *ngIf="registrationForm.get('email')?.touched  && registrationForm.get('email')?.hasError('required') || submitted &&  registrationForm.get('email')?.errors">
+                                Email ID is required</div>
+                            <div *ngIf="registrationForm.get('email')?.hasError('pattern')">
+                                Please enter valid Email ID
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <b><label class="form-label required" for="password">Password</label></b>
+                        <input type="password" formControlName="password" maxlength="12" class="form-control"
+                            placeholder="Enter password" name="password"  ngModel required
+                            [ngClass]="{ 'is-invalid': registrationForm.get('password')?.touched  && registrationForm.get('password')?.hasError('required')|| registrationForm.get('password')?.hasError('pattern') || submitted &&  registrationForm.get('password')?.errors}" />
+                        <div class="invalid-feedback">
+                            <div
+                                *ngIf="registrationForm.get('password')?.touched  && registrationForm.get('password')?.hasError('required') || submitted &&  registrationForm.get('password')?.errors">
+                                Password is required
+                            </div>
+                            <div *ngIf="registrationForm.get('password')?.hasError('pattern')">
+                                Password must contain 1 special character, Digit, numeric and upto 8 character
+                                length
+                            </div>
+                            <div *ngIf=" registrationForm.get('password')?.hasError('minLength')">
+                                Password must not exceed 12 characters
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <button (click)="submit()" type="button" class="btn btn-warning ml-2">Submit</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>
+
+<!-- <div class="container py-3">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let lo of login">
+                <th scope="row">1</th>
+                <td>{{lo.firstName}}</td>
+                <td>{{lo.lastName}}</td>
+                <td>{{lo.email}}</td>
+                <td>{{lo.password}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div> -->

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+
+<head>
+    <title>My first Bootstrap Website</title>
+    <style>
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: rgb(144, 151, 223);
+            color: white;
+        }
+
+        p.dotted {
+            border-bottom: palevioletred;
+        }
+    </style>
+</head>
+
+
+<div id="carouselExampleIndicators" class="carousel slide">
+
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div id="carselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="card-body">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/img/img4.jpg" width="1400" height="500" class="d-block w-70"
+                        alt="Nature Image First">
+                </div>
+                <!-- <div class="carousel-item">
+                    <img src="img/img2.jpg" width="1400" height="600" class="d-block w-100" alt="Nature Image second">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/img3.jpg" width="1400" height="600" class="d-block w-100" alt="Nature Image third">
+                </div> -->
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<div class="container py-3 ">
+    <h3 class="border-bottom">| Welcome to One Stop Happenning Events | </h3>
+    <div class="accordion py-3" id="accordionExample">
+        <div class="accordion-item collapseOne">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button fw-bold pw" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Haldi Event
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show " aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body c4">
+                    Why is haldi festival celebrated?
+                    Haldi Kumkum, or the Haldi Kumkum ceremony, is a social gathering in India in which married women
+                    exchange haldi (turmeric) and kumkum (vermilion powder), as a symbol of their married status and
+                    wishing for their husbands' long lives.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item c2">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed fw-bold pw" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Birthday's Event
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body c4">
+                    There are many amazing natural wonders in India that leave the visitors enchanted. Explore such
+                    incredible marvels to feel surprised.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item c2">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed fw-bold pw" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Enagement Event
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body c4">
+                    In fact, it is a beautiful spot for both sunrise and sunset, as watching first rays of the sun
+                    is an experience that is quite something else.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item c2">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed fw-bold pw" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Wedding Event
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body c4">
+                    One of the best places in India during monsoons is the city of Shillong which receives the
+                    heaviest rainfall during the rainy season. Surrounded ...
+                </div>
+            </div>
+        </div>
+    </div><!--Accordian code end-->
+
+</div>
+
+<script src="js/bootstrap.bundle.js"></script>
