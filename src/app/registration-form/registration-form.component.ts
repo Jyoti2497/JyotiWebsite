@@ -44,6 +44,7 @@ export class RegistrationFormComponent {
       if (data.statusCode == 200) {
         this.toastr.success('Success!', 'Registered!');
         this.onReset();
+        this.router.navigate(['/app-signup']);
       }
     }, (error => {
       this.toastr.error('Error!', error.error.Message);

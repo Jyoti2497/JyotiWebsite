@@ -28,6 +28,7 @@ export class SignupComponent {
   }
   ngOnInit(): void { }
   submit(): void {
+    debugger
     // this.login.push(this.signupForm.value)
     // if (this.submitted = true) {
     //   this.toastr.success('Form submitted successfully!');

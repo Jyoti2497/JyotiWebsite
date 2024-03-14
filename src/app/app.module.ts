@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { VisitorAllComponent } from './visitor-all/visitor-all.component';
 import { NewCompoComponent } from './new-compo/new-compo.component';
+import { AddNewMenteeComponent } from './add-new-mentee/add-new-mentee.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NewCompoComponent } from './new-compo/new-compo.component';
     SignupComponent,
     AddEmployeeComponent,
     VisitorAllComponent,
-    NewCompoComponent
+    NewCompoComponent,
+    AddNewMenteeComponent
 
 
   ],

@@ -58,7 +58,6 @@ export class AddEmployeeComponent {
 
 
   addVisitor() {
-    debugger;
     this.empServices.addVisitor(this.visitorEmpForm.value).subscribe((data: any) => {
       this.visitorData = data;
       if (data.statusCode == 200) {

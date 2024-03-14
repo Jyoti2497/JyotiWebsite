@@ -20,7 +20,7 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: '',
+    path: 'app-signup',
     component: SignupComponent,
     data: { hideNavbar: true }
   },

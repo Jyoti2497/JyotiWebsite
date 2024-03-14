@@ -7,7 +7,7 @@
 
             <div class="mb-3">
                 <b><label class="form-label required" for="email">Email</label></b>
-                <input type="text" formControlName="email" maxlength="20" class="form-control" placeholder="Enter email"
+                <input type="text" formControlName="email" maxlength="" class="form-control" placeholder="Enter email"
                     name="email"  ngModel required
                     [ngClass]="{ 'is-invalid': signupForm.get('email')?.touched  && signupForm.get('email')?.hasError('required') || signupForm.get('email')?.hasError('pattern') || submitted &&  signupForm.get('email')?.errors}" />
                 <div class="invalid-feedback">
