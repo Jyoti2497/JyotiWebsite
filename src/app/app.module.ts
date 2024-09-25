@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
@@ -19,7 +18,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { VisitorAllComponent } from './visitor-all/visitor-all.component';
 import { NewCompoComponent } from './new-compo/new-compo.component';
-import { AddNewMenteeComponent } from './add-new-mentee/add-new-mentee.component';
 
 @NgModule({
   declarations: [
@@ -35,9 +33,6 @@ import { AddNewMenteeComponent } from './add-new-mentee/add-new-mentee.component
     AddEmployeeComponent,
     VisitorAllComponent,
     NewCompoComponent,
-    AddNewMenteeComponent
-
-
   ],
   imports: [
     CommonModule,

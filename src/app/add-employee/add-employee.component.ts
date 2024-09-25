@@ -49,7 +49,7 @@ export class AddEmployeeComponent {
   ngOnInit(): void {
     this.visitorEmpForm = this.formBuilder.group({
       visitorID: 0,
-      visitorName: ['', [Validators.required, Validators.maxLength(8), Validators.pattern(/^[a-zA-Z-&. ]*$/)]],
+      visitorName: ['', [Validators.required, Validators.maxLength(30), Validators.pattern(/^[a-zA-Z-&. ]*$/)]],
       visitorLocation: ['', [Validators.required, Validators.maxLength(8), Validators.pattern(/^[a-zA-Z-&. ]*$/)]],
       visitorNo: ['', [Validators.required, Validators.pattern(/^\d{10}$/g)]],
     });

@@ -9,7 +9,7 @@
                 <div class="formCenter mb-3">
                     <div class="col-md-6 my-3">
                         <label class="form-label row g-3 required" for="firstName"> Visitor Name</label>
-                        <input type="text" formControlName="visitorName" maxlength="20" class="form-control"
+                        <input type="text" formControlName="visitorName" class="form-control"
                             placeholder="Enter visitor name" name="visitorName"  ngModel required
                             [ngClass]="{ 'is-invalid': visitorEmpForm.get('visitorName')?.touched  && visitorEmpForm.get('visitorName')?.hasError('required') || visitorEmpForm.get('visitorName')?.hasError('pattern') || submitted &&  visitorEmpForm.get('visitorName')?.errors}" />
                         <div class="invalid-feedback">
@@ -45,7 +45,7 @@
                 <div class="row mb-8">
                     <div class="col-md-6">
                         <label class="form-label required" for="visitorNo">Visitor Contact No</label>
-                        <input type="text" formControlName="visitorNo" maxlength="20" class="form-control"
+                        <input type="text" formControlName="visitorNo" maxlength="10" class="form-control"
                             placeholder="Enter visitor contact no" name="visitorNo"  ngModel required
                             [ngClass]="{ 'is-invalid': visitorEmpForm.get('visitorNo')?.touched  && visitorEmpForm.get('visitorNo')?.hasError('required') || visitorEmpForm.get('visitorNo')?.hasError('pattern') || submitted &&  visitorEmpForm.get('visitorNo')?.errors}" />
                         <div class="invalid-feedback">
